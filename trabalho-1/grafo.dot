@@ -1,0 +1,22 @@
+digraph G {
+a -> b;
+c [shape=box];
+a -> c [weight=29,label="some text"];
+
+	subgraph anything {
+	/* the following affects only x,y,z */
+	node [shape=circle];
+	a; x; y -> z; y -> z; /* multiple edges */
+	}
+
+	
+}
+	
+
+
+subgraph anything2 {
+	/* the following affects only x,y,z */
+	node [shape=circle];
+	c; d; c -> d; /* multiple edges */
+	}
+
